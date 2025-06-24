@@ -14,13 +14,8 @@ Skip32 transforms sequential numbers (like database IDs) into seemingly random v
 
 Add dependency:
 
-```zig
-.dependencies = .{
-    .skip32 = .{
-        .url = "https://github.com/caiocdcs/skip32/archive/v0.0.1.tar.gz",
-        .hash = "...",
-    },
-},
+```bash
+.zig fetch https://github.com/caiocdcs/skip32/archive/v0.0.1.tar.gz --save
 ```
 
 ### 2. Configure Build
