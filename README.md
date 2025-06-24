@@ -8,17 +8,38 @@ Skip32 transforms sequential numbers (like database IDs) into seemingly random v
 
 ⚠️ **Note**: Skip32 is for obfuscation, not cryptographic security.
 
-## Installation
+## Getting Started
 
-Add to your `build.zig.zon`:
+### 1. Add Dependency
+
+Add dependency:
 
 ```zig
 .dependencies = .{
     .skip32 = .{
         .url = "https://github.com/caiocdcs/skip32/archive/v0.0.1.tar.gz",
-        .hash = "...", // Update with last hash
+        .hash = "...",
     },
 },
+```
+
+### 2. Configure Build
+
+In your `build.zig`:
+
+```zig
+const skip32 = b.dependency("skip32", .{
+    .target = target,
+    .optimize = optimize,
+});
+
+exe.root_module.addImport("skip32", skip32.module("skip32"));
+```
+
+### 3. Fetch Dependencies
+
+```bash
+zig build --fetch
 ```
 
 ## Usage
