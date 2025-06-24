@@ -15,8 +15,8 @@ Add to your `build.zig.zon`:
 ```zig
 .dependencies = .{
     .skip32 = .{
-        .url = "https://github.com/yourusername/skip32-zig/archive/v0.0.1.tar.gz",
-        .hash = "...",
+        .url = "https://github.com/caiocdcs/skip32/archive/v0.0.1.tar.gz",
+        .hash = "...", // Update with last hash
     },
 },
 ```
@@ -42,7 +42,7 @@ Key must be exactly 10 bytes. Encoding/decoding is perfectly reversible.
 ## Example Use Cases
 
 - Hide sequential database IDs in URLs
-- Obfuscate user IDs in APIs  
+- Obfuscate user IDs in APIs
 - Generate non-predictable order numbers
 - Create hard-to-guess tokens (with proper key management)
 
