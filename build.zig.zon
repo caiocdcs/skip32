@@ -1,5 +1,5 @@
 .{
-    .name = "skip32",
+    .name = .skip32,
 
     .version = "0.0.1",
 
